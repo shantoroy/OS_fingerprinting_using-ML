@@ -2,6 +2,11 @@
 
 **Details on the way...**
 
+## Breaking Down PCAP files (MB)
+```
+tcpdump -r <old_file> -w <new_file> -C 100
+```
+
 ## Convert PCAP to CSV
 ```
 tshark -r thursday.pcap -T fields -E header=y -E separator=, -E quote=d -E occurrence=f \
@@ -45,7 +50,7 @@ $ python main.py -file thursday-100M-v2.csv -features 1,5,8,13,17,18,19,20,22,23
 ## Used Dataset
 A very small part of the [CIC-IDS2017](https://www.unb.ca/cic/datasets/ids-2017.html)
 
-## Ground Truth
+## Labeling Data (Ground Truth)
 ```
 ip_dict = {
     '192.168.10.51': 'Ubuntu server 12',
@@ -61,3 +66,9 @@ ip_dict = {
     '192.168.10.25': 'macOS'
 }
 ```
+
+## Future Work
+* Tune the Classification Hyperparameters
+* Use DNN (MLP and LSTM) to classify
+* Use large Dataset
+* Improve Code Documentation
