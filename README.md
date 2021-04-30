@@ -78,19 +78,21 @@ Features are selected based on the following feature ranking algorithms
 
 
 ## Considered Features
-    * ip.ttl
-    * ip.flags
-    * ip.flags.df
-    * ip.flags.mf
-    * ip.flags.rb
-    * tcp.hdr_len
-    * tcp.flags.fin
-    * tcp.flags.syn
-    * tcp.flags.reset
-    * tcp.flags.push
-    * tcp.flags.ack
-    * tcp.flags.urg
-    * tcp.window_size
+* ip.hdr_len
+* ip.flags.df
+* ip.ttl
+* ip.len
+* tcp.seq
+* tcp.ack
+* tcp.len
+* tcp.hdr_len
+* tcp.flags.fin
+* tcp.flags.syn
+* tcp.flags.reset
+* tcp.flags.push
+* tcp.flags.ack
+* tcp.window_size
+
 
 ## Used Dataset
 A very small part of the [CIC-IDS2017](https://www.unb.ca/cic/datasets/ids-2017.html)
