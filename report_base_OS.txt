@@ -1,0 +1,148 @@
+Total number of packets:  48962
+
+
+### Logistic Regression Classifier ###
+Classification Report: 
+              precision    recall  f1-score   support
+
+      Ubuntu       0.97      0.99      0.98      1424
+     Windows       1.00      1.00      1.00      8076
+       macOS       0.93      0.87      0.90       293
+
+    accuracy                           0.99      9793
+   macro avg       0.97      0.95      0.96      9793
+weighted avg       0.99      0.99      0.99      9793
+ 
+
+Confusion Matrix: 
+[[1406    0   18]
+ [   0 8076    0]
+ [  38    0  255]] 
+
+Precision:  99.42816297355253 %
+
+
+### K-Neighbors Classifier ###
+Classification Report: 
+              precision    recall  f1-score   support
+
+      Ubuntu       1.00      1.00      1.00      1424
+     Windows       1.00      1.00      1.00      8076
+       macOS       0.98      0.99      0.98       293
+
+    accuracy                           1.00      9793
+   macro avg       0.99      1.00      0.99      9793
+weighted avg       1.00      1.00      1.00      9793
+ 
+
+Confusion Matrix: 
+[[1418    0    6]
+ [   0 8076    0]
+ [   3    0  290]] 
+
+Precision:  99.90809762074952 %
+
+
+### Support Vector Classifier (linear) ###
+Classification Report: 
+              precision    recall  f1-score   support
+
+      Ubuntu       0.97      0.99      0.98      1424
+     Windows       1.00      1.00      1.00      8076
+       macOS       0.96      0.87      0.91       293
+
+    accuracy                           0.99      9793
+   macro avg       0.98      0.95      0.97      9793
+weighted avg       0.99      0.99      0.99      9793
+ 
+
+Confusion Matrix: 
+[[1413    0   11]
+ [   0 8076    0]
+ [  38    0  255]] 
+
+Precision:  99.49964260185847 %
+
+
+### Support Vector Classifier (rbf) ###
+Classification Report: 
+              precision    recall  f1-score   support
+
+      Ubuntu       0.98      1.00      0.99      1424
+     Windows       1.00      1.00      1.00      8076
+       macOS       0.98      0.89      0.93       293
+
+    accuracy                           1.00      9793
+   macro avg       0.98      0.96      0.97      9793
+weighted avg       1.00      1.00      1.00      9793
+ 
+
+Confusion Matrix: 
+[[1418    0    6]
+ [   0 8076    0]
+ [  33    0  260]] 
+
+Precision:  99.60175635658123 %
+
+
+### Naive Bayes Classifier ###
+Classification Report: 
+              precision    recall  f1-score   support
+
+      Ubuntu       0.97      0.94      0.96      1424
+     Windows       1.00      1.00      1.00      8076
+       macOS       0.75      0.86      0.80       293
+
+    accuracy                           0.99      9793
+   macro avg       0.91      0.93      0.92      9793
+weighted avg       0.99      0.99      0.99      9793
+ 
+
+Confusion Matrix: 
+[[1339    0   85]
+ [   0 8076    0]
+ [  40    0  253]] 
+
+Precision:  98.72357806596548 %
+
+
+### Decision Tree Classifier ###
+Classification Report: 
+              precision    recall  f1-score   support
+
+      Ubuntu       1.00      1.00      1.00      1424
+     Windows       1.00      1.00      1.00      8076
+       macOS       1.00      1.00      1.00       293
+
+    accuracy                           1.00      9793
+   macro avg       1.00      1.00      1.00      9793
+weighted avg       1.00      1.00      1.00      9793
+ 
+
+Confusion Matrix: 
+[[1424    0    0]
+ [   0 8076    0]
+ [   0    0  293]] 
+
+Precision:  100.0 %
+
+
+### Random Forest Classifier ###
+Classification Report: 
+              precision    recall  f1-score   support
+
+      Ubuntu       1.00      1.00      1.00      1424
+     Windows       1.00      1.00      1.00      8076
+       macOS       1.00      0.99      0.99       293
+
+    accuracy                           1.00      9793
+   macro avg       1.00      1.00      1.00      9793
+weighted avg       1.00      1.00      1.00      9793
+ 
+
+Confusion Matrix: 
+[[1424    0    0]
+ [   0 8076    0]
+ [   3    0  290]] 
+
+Precision:  99.96936587358317 %

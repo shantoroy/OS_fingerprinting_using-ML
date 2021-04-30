@@ -1,13 +1,4 @@
 Total number of packets:  48962
-/Users/roy/miniconda3/envs/tensorflow/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
-STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
-
-Increase the number of iterations (max_iter) or scale the data as shown in:
-    https://scikit-learn.org/stable/modules/preprocessing.html
-Please also refer to the documentation for alternative solver options:
-    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
-  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
-
 
 ### Logistic Regression Classifier ###
 Classification Report: 
@@ -75,8 +66,6 @@ Precision:  85.93893597467579 %
 
 ### Support Vector Classifier (linear) ###
 Classification Report: 
-/Users/roy/miniconda3/envs/tensorflow/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
                   precision    recall  f1-score   support
 
      Ubuntu 14.4       0.91      1.00      0.95      1329
@@ -108,8 +97,6 @@ Precision:  62.44256101296845 %
 
 ### Support Vector Classifier (rbf) ###
 Classification Report: 
-/Users/roy/miniconda3/envs/tensorflow/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
-  _warn_prf(average, modifier, msg_start, len(result))
                   precision    recall  f1-score   support
 
      Ubuntu 14.4       0.91      1.00      0.95      1329
