@@ -1,0 +1,232 @@
+Total number of packets:  48962
+/Users/roy/miniconda3/envs/tensorflow/lib/python3.7/site-packages/sklearn/linear_model/_logistic.py:764: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  extra_warning_msg=_LOGISTIC_SOLVER_CONVERGENCE_MSG)
+
+
+### Logistic Regression Classifier ###
+Classification Report: 
+/Users/roy/miniconda3/envs/tensorflow/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+                  precision    recall  f1-score   support
+
+     Ubuntu 14.4       0.91      0.98      0.94      1329
+     Ubuntu 16.4       0.00      0.00      0.00        80
+Ubuntu server 12       0.00      0.00      0.00        15
+          Win 10       0.57      0.97      0.72      4536
+           Win 7       0.38      0.10      0.16      1368
+         Win 8.1       0.50      0.00      0.00      1872
+       Win Vista       0.75      0.07      0.13       300
+           macOS       0.91      0.87      0.89       293
+
+        accuracy                           0.63      9793
+       macro avg       0.50      0.37      0.36      9793
+    weighted avg       0.59      0.63      0.52      9793
+ 
+
+Confusion Matrix: 
+[[1304    0    0    0    0    0    0   25]
+ [  80    0    0    0    0    0    0    0]
+ [  15    0    0    0    0    0    0    0]
+ [   0    0    0 4413  121    1    1    0]
+ [   0    0    0 1224  139    0    5    0]
+ [   0    0    0 1798   72    1    1    0]
+ [   0    0    0  243   36    0   21    0]
+ [  38    0    0    0    0    0    0  255]] 
+
+Precision:  62.626365771469416 %
+
+
+### K-Neighbors Classifier ###
+Classification Report: 
+                  precision    recall  f1-score   support
+
+     Ubuntu 14.4       0.97      0.98      0.97      1329
+     Ubuntu 16.4       0.67      0.50      0.57        80
+Ubuntu server 12       0.47      0.53      0.50        15
+          Win 10       0.89      0.91      0.90      4536
+           Win 7       0.69      0.76      0.73      1368
+         Win 8.1       0.85      0.78      0.82      1872
+       Win Vista       0.71      0.42      0.53       300
+           macOS       0.98      0.99      0.98       293
+
+        accuracy                           0.86      9793
+       macro avg       0.78      0.73      0.75      9793
+    weighted avg       0.86      0.86      0.86      9793
+ 
+
+Confusion Matrix: 
+[[1298   19    6    0    0    0    0    6]
+ [  37   40    3    0    0    0    0    0]
+ [   6    1    8    0    0    0    0    0]
+ [   0    0    0 4147  242  125   22    0]
+ [   0    0    0  218 1040   94   16    0]
+ [   0    0    0  239  153 1468   12    0]
+ [   0    0    0   75   62   38  125    0]
+ [   3    0    0    0    0    0    0  290]] 
+
+Precision:  85.93893597467579 %
+
+
+### Support Vector Classifier (linear) ###
+Classification Report: 
+/Users/roy/miniconda3/envs/tensorflow/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+                  precision    recall  f1-score   support
+
+     Ubuntu 14.4       0.91      1.00      0.95      1329
+     Ubuntu 16.4       0.00      0.00      0.00        80
+Ubuntu server 12       0.00      0.00      0.00        15
+          Win 10       0.56      1.00      0.72      4536
+           Win 7       0.00      0.00      0.00      1368
+         Win 8.1       0.00      0.00      0.00      1872
+       Win Vista       0.00      0.00      0.00       300
+           macOS       0.98      0.87      0.92       293
+
+        accuracy                           0.62      9793
+       macro avg       0.31      0.36      0.32      9793
+    weighted avg       0.41      0.62      0.49      9793
+ 
+
+Confusion Matrix: 
+[[1324    0    0    0    0    0    0    5]
+ [  80    0    0    0    0    0    0    0]
+ [  15    0    0    0    0    0    0    0]
+ [   0    0    0 4536    0    0    0    0]
+ [   0    0    0 1368    0    0    0    0]
+ [   0    0    0 1872    0    0    0    0]
+ [   0    0    0  300    0    0    0    0]
+ [  38    0    0    0    0    0    0  255]] 
+
+Precision:  62.44256101296845 %
+
+
+### Support Vector Classifier (rbf) ###
+Classification Report: 
+/Users/roy/miniconda3/envs/tensorflow/lib/python3.7/site-packages/sklearn/metrics/_classification.py:1221: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+                  precision    recall  f1-score   support
+
+     Ubuntu 14.4       0.91      1.00      0.95      1329
+     Ubuntu 16.4       0.00      0.00      0.00        80
+Ubuntu server 12       0.00      0.00      0.00        15
+          Win 10       0.66      0.98      0.79      4536
+           Win 7       0.77      0.19      0.31      1368
+         Win 8.1       0.87      0.47      0.61      1872
+       Win Vista       1.00      0.15      0.26       300
+           macOS       0.98      0.89      0.93       293
+
+        accuracy                           0.74      9793
+       macro avg       0.65      0.46      0.48      9793
+    weighted avg       0.76      0.74      0.69      9793
+ 
+
+Confusion Matrix: 
+[[1323    0    0    0    0    0    0    6]
+ [  80    0    0    0    0    0    0    0]
+ [  15    0    0    0    0    0    0    0]
+ [   0    0    0 4426   20   90    0    0]
+ [   0    0    0 1065  266   37    0    0]
+ [   0    0    0  930   61  881    0    0]
+ [   0    0    0  254    0    1   45    0]
+ [  33    0    0    0    0    0    0  260]] 
+
+Precision:  73.53211477586031 %
+
+
+### Naive Bayes Classifier ###
+Classification Report: 
+                  precision    recall  f1-score   support
+
+     Ubuntu 14.4       0.94      0.43      0.59      1329
+     Ubuntu 16.4       0.12      0.75      0.21        80
+Ubuntu server 12       0.04      0.80      0.07        15
+          Win 10       0.61      0.82      0.70      4536
+           Win 7       0.31      0.14      0.19      1368
+         Win 8.1       0.30      0.04      0.07      1872
+       Win Vista       0.10      0.37      0.15       300
+           macOS       0.91      0.85      0.88       293
+
+        accuracy                           0.51      9793
+       macro avg       0.42      0.52      0.36      9793
+    weighted avg       0.54      0.51      0.48      9793
+ 
+
+Confusion Matrix: 
+[[ 567  429  307    0    0    0    0   26]
+ [   0   60   20    0    0    0    0    0]
+ [   0    3   12    0    0    0    0    0]
+ [   0    0    0 3707  195  116  518    0]
+ [   0    0    0  852  186   47  283    0]
+ [   0    0    0 1403  152   76  241    0]
+ [   0    0    0  116   62   11  111    0]
+ [  38    6    0    0    0    0    0  249]] 
+
+Precision:  50.73011334626775 %
+
+
+### Decision Tree Classifier ###
+Classification Report: 
+                  precision    recall  f1-score   support
+
+     Ubuntu 14.4       0.99      0.99      0.99      1329
+     Ubuntu 16.4       0.90      0.86      0.88        80
+Ubuntu server 12       0.92      0.73      0.81        15
+          Win 10       0.91      0.97      0.94      4536
+           Win 7       0.87      0.80      0.83      1368
+         Win 8.1       0.90      0.86      0.88      1872
+       Win Vista       0.82      0.61      0.70       300
+           macOS       1.00      1.00      1.00       293
+
+        accuracy                           0.92      9793
+       macro avg       0.91      0.85      0.88      9793
+    weighted avg       0.91      0.92      0.91      9793
+ 
+
+Confusion Matrix: 
+[[1320    8    1    0    0    0    0    0]
+ [  11   69    0    0    0    0    0    0]
+ [   4    0   11    0    0    0    0    0]
+ [   0    0    0 4381   69   74   12    0]
+ [   0    0    0  168 1100   85   15    0]
+ [   0    0    0  177   73 1609   13    0]
+ [   0    0    0   70   25   23  182    0]
+ [   1    0    0    0    0    0    0  292]] 
+
+Precision:  91.5347697334831 %
+
+
+### Random Forest Classifier ###
+Classification Report: 
+                  precision    recall  f1-score   support
+
+     Ubuntu 14.4       0.99      0.99      0.99      1329
+     Ubuntu 16.4       0.91      0.84      0.87        80
+Ubuntu server 12       0.92      0.73      0.81        15
+          Win 10       0.89      0.96      0.93      4536
+           Win 7       0.86      0.77      0.81      1368
+         Win 8.1       0.89      0.83      0.86      1872
+       Win Vista       0.79      0.58      0.67       300
+           macOS       0.99      1.00      1.00       293
+
+        accuracy                           0.90      9793
+       macro avg       0.90      0.84      0.87      9793
+    weighted avg       0.90      0.90      0.90      9793
+ 
+
+Confusion Matrix: 
+[[1319    7    1    0    0    0    0    2]
+ [  13   67    0    0    0    0    0    0]
+ [   4    0   11    0    0    0    0    0]
+ [   0    0    0 4366   78   79   13    0]
+ [   0    0    0  220 1047   87   14    0]
+ [   0    0    0  218   77 1558   19    0]
+ [   0    0    0   78   19   30  173    0]
+ [   0    0    0    0    0    0    0  293]] 
+
+Precision:  90.2072909220872 %
