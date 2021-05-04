@@ -1,8 +1,10 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.metrics import classification_report, confusion_matrix
 import joblib
+import os
 
 
 def preprocess(dataset, x_iloc_list, y_iloc, testSize):
@@ -59,6 +61,19 @@ class classification:
                     sum += confusion_matrix[i,j]
                 total += confusion_matrix[i,j]
         return sum/total
+
+
+    def classification_report_plot(self, clf_report, filename):
+        folder = "clf_plots"
+        if not os.path.isdir(folder):
+            os.mkdir(folder)
+        
+        out_file_name = folder + "/" + filename + ".png"
+        
+        fig=plt.figure(figsize=(16,10))
+        sns.set(font_scale=4)
+        sns.heatmap(pd.DataFrame(clf_report).iloc[:-1, :].T, annot=True, cmap="Greens")
+        fig.savefig(out_file_name, bbox_inches="tight")
     
     
     def LR(self):
@@ -75,6 +90,9 @@ class classification:
         print('Confusion Matrix: ')
         print(confusion_matrix(self.y_test, y_pred),'\n')
         print('Precision: ', self.accuracy(confusion_matrix(self.y_test, y_pred))*100,'%')
+
+        self.classification_report_plot(classification_report(self.y_test, y_pred, \
+                                                                    output_dict=True), "LR")
         
         if len(self.X_train[0]) == 2:
             self.classification_view(self.X_train, self.y_train, lr_classifier)
@@ -94,6 +112,9 @@ class classification:
         print('Confusion Matrix: ')
         print(confusion_matrix(self.y_test, y_pred),'\n')
         print('Precision: ', self.accuracy(confusion_matrix(self.y_test, y_pred))*100,'%')
+
+        self.classification_report_plot(classification_report(self.y_test, y_pred, \
+                                                                    output_dict=True), "KNN")
         
         if len(self.X_train[0]) == 2:
             self.classification_view(self.X_train, self.y_train, knn_classifier)
@@ -114,6 +135,9 @@ class classification:
         print('Confusion Matrix: ')
         print(confusion_matrix(self.y_test, y_pred),'\n')
         print('Precision: ', self.accuracy(confusion_matrix(self.y_test, y_pred))*100,'%')
+
+        self.classification_report_plot(classification_report(self.y_test, y_pred, \
+                                                                    output_dict=True), "SVC"+kernel_type)
         
         if len(self.X_train[0]) == 2:
             self.classification_view(self.X_train, self.y_train, svm_classifier)
@@ -133,6 +157,9 @@ class classification:
         print('Confusion Matrix: ')
         print(confusion_matrix(self.y_test, y_pred),'\n')
         print('Precision: ', self.accuracy(confusion_matrix(self.y_test, y_pred))*100,'%')
+
+        self.classification_report_plot(classification_report(self.y_test, y_pred, \
+                                                                    output_dict=True), "NB")
         
         if len(self.X_train[0]) == 2:
             self.classification_view(self.X_train, self.y_train, nb_classifier)
@@ -152,6 +179,9 @@ class classification:
         print('Confusion Matrix: ')
         print(confusion_matrix(self.y_test, y_pred),'\n')
         print('Precision: ', self.accuracy(confusion_matrix(self.y_test, y_pred))*100,'%')
+
+        self.classification_report_plot(classification_report(self.y_test, y_pred, \
+                                                                    output_dict=True), "DT")
         
         if len(self.X_train[0]) == 2:
             self.classification_view(self.X_train, self.y_train, tree_classifier)
@@ -171,6 +201,9 @@ class classification:
         print('Confusion Matrix: ')
         print(confusion_matrix(self.y_test, y_pred),'\n')
         print('Precision: ', self.accuracy(confusion_matrix(self.y_test, y_pred))*100,'%')
+
+        self.classification_report_plot(classification_report(self.y_test, y_pred, \
+                                                                    output_dict=True), "RF")
         
         if len(self.X_train[0]) == 2:
             self.classification_view(self.X_train, self.y_train, rf_classifier)
