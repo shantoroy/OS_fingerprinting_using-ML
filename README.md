@@ -62,13 +62,13 @@ $ python main.py -file thursday-100M-v2.csv -features 1,5,8,13,17,18,19,20,22,23
 
 ## Classification Methods
 The following `multi-class classification` algorithms have been used to train and test the dataset 
-    * Logistic Regression Classifier
-    * K-Neighbor Classifier
-    * SVM (Linear) Classifier
-    * SVM (RBF) Classifier
-    * Naive Bayes Classifier
-    * Decision Tree Classifier
-    * Random Forest Classifier
+* Logistic Regression Classifier
+* K-Neighbor Classifier
+* SVM (Linear) Classifier
+* SVM (RBF) Classifier
+* Naive Bayes Classifier
+* Decision Tree Classifier
+* Random Forest Classifier
 
 ## Feature Selection Algorithms
 Features are selected based on the following feature ranking algorithms
@@ -78,7 +78,6 @@ Features are selected based on the following feature ranking algorithms
 
 
 ## Considered Features
-* ip.hdr_len
 * ip.flags.df
 * ip.ttl
 * ip.len
