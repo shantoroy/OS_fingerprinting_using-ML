@@ -32,6 +32,20 @@ $ tshark -r input.pcap -T fields -E header=y -E separator=, -E quote=d -E occurr
 -e tcp.checksum -e tcp.urgent_pointer -e tcp.options.mss_val > output.csv
 ```
 
+> Correction to previous version
+> It's a lot better to consider traffic flow rather can considering each packet.
+> Therefore, we filter only the first packet of a flow
+```
+$ tshark -r input.pcap -Y "tcp.flags.syn eq 1" -T fields -E header=y -E separator=, -E quote=d -E occurrence=f \
+-e ip.version -e ip.hdr_len -e ip.tos -e ip.id -e ip.flags -e ip.flags.rb -e ip.flags.df \ 
+-e ip.flags.mf -e ip.frag_offset -e ip.ttl -e ip.proto -e ip.checksum -e ip.src -e ip.dst \ 
+-e ip.len -e ip.dsfield -e tcp.srcport -e tcp.dstport -e tcp.seq -e tcp.ack -e tcp.len \ 
+-e tcp.hdr_len -e tcp.flags -e tcp.flags.fin -e tcp.flags.syn -e tcp.flags.reset \ 
+-e tcp.flags.push -e tcp.flags.ack -e tcp.flags.urg -e tcp.flags.cwr -e tcp.window_size \ 
+-e tcp.checksum -e tcp.urgent_pointer -e tcp.options.mss_val > output.csv
+```
+
+
 Note that, there are many other options I did not include in the CSV file. If more interested, 
 you can check other options as well. For example, [this article](https://www.linkedin.com/pulse/build-machine-learning-model-network-flow-tao-liu/) did the following for a different purpose.
 ```
